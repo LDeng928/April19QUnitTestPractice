@@ -3,27 +3,32 @@
 </head>
 <body>
   <input
-    id="kilogram"
-    placeholder="Enter package wright in KG"
+    id="taxableIncome"
+    placeholder="Enter taxable income"
+    onkeydown="focusNext(event)"
+    style="margin-bottom: 10px"
+  />
+  <br />
+  <input
+    id="taxDeducted"
+    placeholder="Enter tax deducted"
     onkeydown="focusNext(event)"
   />
-  <select id="provinces" onkeydown="focusNext(event)">
-    <option value="ON">Ontario</option>
-    <option value="MB">Manitoba</option>
-    <option value="AB">Alberta</option>
-    <option value="QC">Quebec</option>
-    <option value="SK">Saskatchewan</option>
-    <option value="NS">Nova Scotia</option>
-    <option value="PE">Prince Edward Island</option>
-  </select>
+
+  <p>Ontario tax</p>
+  <span id="ontarioTax"> 0 </span><br />
+
+  <p>Federal tax</p>
+  <span id="federalTax"> 0 </span><br />
+
+  <p>Total tax payable</p>
+  <span id="totalTax"> 0 </span><br />
+
+  <p>Tax owing</p>
+  <span id="taxOwing"> 0 </span><br />
 
   <button id="calculate" onclick="calculate()">Calculate</button>
 
-  <p>
-    Total shipping cost on <span id="kg"> 0 </span> kg to
-    <span id="pro"> 0 </span> is
-    <span id="totalPrice">0</span>
-  </p>
   <!-- <p>Hst on <span id="amount">0</span> is <span id="hst">0</span></p> -->
   <script type="module" src="js/main.js"></script>
   <!-- The script.js will allow user to move to the next item when press ENTER -->
