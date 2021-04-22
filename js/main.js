@@ -5,8 +5,8 @@ $(document).ready(() => {
   $("#calculate").click((event) => {
     event.preventDefault();
 
-    const nTaxableIncome = $("#taxableIncome");
-    const nTaxDeducted = $("#taxDeducted");
+    const nTaxableIncome = $("#taxableIncome").val();
+    const nTaxDeducted = $("#taxDeducted").val();
     const oTax = new Tax();
 
     $("#ontarioTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted));
