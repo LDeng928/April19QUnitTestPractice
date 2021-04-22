@@ -9,10 +9,10 @@ $(document).ready(() => {
     const nTaxDeducted = $("#taxDeducted").val();
     const oTax = new Tax();
 
-    $("#ontarioTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted));
-    $("#federalTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted));
-    $("#totalTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted));
-    $("#taxOwing").html(oTax.calculate(nTaxableIncome, nTaxDeducted));
+    $("#ontarioTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted)[0]);
+    $("#federalTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted)[1]);
+    $("#totalTax").html(oTax.calculate(nTaxableIncome, nTaxDeducted)[2]);
+    $("#taxOwing").html(oTax.calculate(nTaxableIncome, nTaxDeducted)[3]);
   });
 });
 
