@@ -1,4 +1,4 @@
-var idArray = ["kilogram", "provinces", "calculate"];
+var idArray = ["taxableIncome", "taxDeducted", "calculate"];
 function focusNext(e) {
   try {
     for (var i = 0; i < idArray.length; i++) {
